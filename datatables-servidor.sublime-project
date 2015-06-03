@@ -1,0 +1,18 @@
+{
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+			"path": "."
+		}
+	]
+	,
+    "settings": {
+        "xdebug": {
+       	    "path_mapping": {
+            "/var/www/html/datatables2/" : "/home/juanda/datatables_servidor/",
+            },
+             "url": "http://localhost:9000/datatables2/ejercicio2.php"
+        }
+    }
+}

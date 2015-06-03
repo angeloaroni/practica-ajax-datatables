@@ -1,0 +1,5 @@
+Ayuda: Puedes ayudarte de una vista:
+CREATE VIEW  “nombre de mi vista” AS
+select id_clinica, clinicas.nombre, razonsocial, cif, localidad, provincia, direccion, cp, numclinica, tarifas.id_tarifa as id_tarifa, 
+tarifas.nombre as nombretarifa, descripcion 
+from clinicas, tarifas where clinicas.id_tarifa=tarifas.id_tarifa;

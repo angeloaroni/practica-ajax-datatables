@@ -1,0 +1,71 @@
+<!doctype html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicios Datatables Servidor</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main2.css -->
+    <link rel="stylesheet" href="styles/dataTables.bootstrap.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <table id="miTabla" class="table">
+                    <thead>
+                        <th>id_clinica</th>
+                        <th>Nombre</th>
+                        <th>Razón Social</th>
+                        <th>CIF</th>
+                        <th>Localidad</th>
+                        <th>Provincia</th>
+                        <th>Dirección</th>
+                        <th>Número de clínica</th>
+                        <th>id_tarifa</th>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                    <tfoot>
+                        <th>id_clinica</th>
+                        <th>Nombre</th>
+                        <th>Razón Social</th>
+                        <th>CIF</th>
+                        <th>Localidad</th>
+                        <th>Provincia</th>
+                        <th>Dirección</th>
+                        <th>Número de clínica</th>
+                        <th>id_tarifa</th>
+                    </tfoot>
+                </table>
+
+            </div>
+        </div>
+    </div>
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({app,.tmp}) scripts/ejercicio3.js -->
+    <script src="scripts/jquery.dataTables.js"></script>
+    <script src="scripts/dataTables.bootstrap.js"></script>
+        <script src="scripts/ejercicio3.js"></script>
+    <!-- endbuild -->
+
+
+</body>
+
+</html>

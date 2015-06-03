@@ -1,0 +1,5 @@
+Para ejercicio 2 y sucesivos:
+Modificado el dist en Gruntfile.js para que el build vaya  a un directorio servido por Apache para poder procesar los ficheros php.
+Instalado el plugin grunt-shell para poder borrar el directorio del build de forma automática (https://github.com/sindresorhus/grunt-shell).
+Modificado Gruntfile.js para que en la tarea build, ejecute grunt-shell (por eso de que la tarea clean no puede borrar fuera de los directorios del proyecto, hacemos el borrado mediante línea de comandos).
+

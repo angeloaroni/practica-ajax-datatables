@@ -1,0 +1,208 @@
+<!doctype html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicios Datatables Servidor</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main6.css -->
+    <link rel="stylesheet" href="styles/dataTables.bootstrap.css">
+    <link rel="stylesheet" href="styles/main6.css">
+    <!-- endbuild -->
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div id="tabla" class="row">
+            <div class="col-md-12">
+                <table id="miTabla" class="table">
+                    <thead>
+                        <th>id_clinica</th>
+                        <th>Nombre</th>
+                        <th>Razón Social</th>
+                        <th>CIF</th>
+                        <th>Localidad</th>
+                        <th>Provincia</th>
+                        <th>Dirección</th>
+                        <th>Código Postal</th>
+                        <th>Número de clínica</th>
+                        <th>id_tarifa</th>
+                        <th>Tipo Tarifa</th>
+                        <th>Editar</th>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                    <tfoot>
+                        <th>id_clinica</th>
+                        <th>Nombre</th>
+                        <th>Razón Social</th>
+                        <th>CIF</th>
+                        <th>Localidad</th>
+                        <th>Provincia</th>
+                        <th>Dirección</th>
+                        <th>Código Postal</th>
+                        <th>Número de clínica</th>
+                        <th>id_tarifa</th>
+                        <th>Tipo Tarifa</th>
+                        <th>Editar</th>
+                    </tfoot>
+                </table>
+
+            </div>
+        </div>
+        <div id="formulario" class="row">
+            <div class="col-md-4 col-md-offset-3">
+                <!--/*el formulario es aproximadamente un copy-paste de http://getbootstrap.com/css/#forms -->
+                <form class="form-horizontal">
+                    <div>
+                        <div class="form-group">
+                            <label for="idClinica" class="col-sm-2 control-label">Identificador Clínica</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="idClinica">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="nombre" class="col-sm-2 control-label">Nombre</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="nombre" placeholder="Nombre de la clínica">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="numClinica" class="col-sm-2 control-label">Nº Clínica</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="numClinica" placeholder="Número de la clínica">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="razonSocial" class="col-sm-2 control-label">Razón Social</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="razonSocial" placeholder="Razón social de la clínica">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="cif" class="col-sm-2 control-label">CIF</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="cif" placeholder="CIF de la clínica">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="localidad" class="col-sm-2 control-label">Localidad</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="localidad" placeholder="Localidad de la clínica">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cif" class="col-sm-2 control-label">CIF</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="direccion" placeholder="Dirección de la clínica">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="cp" class="col-sm-2 control-label">Código Postal</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="cp" placeholder="Código Postal de la clínica">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="provincia" class="col-sm-2 control-label">Provincia</label>
+                            <div class="col-sm-10">
+                                <select class="form-control" id="provincia">
+                                    <option value="ÁLAVA" label="Álava">Álava</option>
+                                    <option value="ALBACETE" label="Albacete">Albacete</option>
+                                    <option value="ALICANTE" label="Alicante">Alicante</option>
+                                    <option value="ALMERÍA" label="Almería">Almería</option>
+                                    <option value="ASTURIAS" label="Asturias">Asturias</option>
+                                    <option value="ÁVILA" label="Ávila">Ávila</option>
+                                    <option value="BADAJOZ" label="Badajoz">Badajoz</option>
+                                    <option value="BALEARES" label="Baleares">Baleares</option>
+                                    <option value="BARCELONA" label="Barcelona">Barcelona</option>
+                                    <option value="BURGOS" label="Burgos">Burgos</option>
+                                    <option value="CÁCERES" label="Cáceres">Cáceres</option>
+                                    <option value="CÁDIZ" label="Cádiz">Cádiz</option>
+                                    <option value="CANTABRIA" label="Cantabria">Cantabria</option>
+                                    <option value="CASTELLÓN" label="Castellón">Castellón</option>
+                                    <option value="CEUTA" label="Ceuta">Ceuta</option>
+                                    <option value="CIUDAD Real" label="Ciudad Real">Ciudad Real</option>
+                                    <option value="CÓRDOBA" label="Córdoba">Córdoba</option>
+                                    <option value="CORUÑA" label="Coruña">Coruña</option>
+                                    <option value="CUENCA" label="Cuenca">Cuenca</option>
+                                    <option value="GERONA" label="Gerona">Gerona</option>
+                                    <option value="GRANADA" label="Granada">Granada</option>
+                                    <option value="GUADALAJARA" label="Guadalajara">Guadalajara</option>
+                                    <option value="GUIPÚZCOA" label="Guipúzcoa">Guipúzcoa</option>
+                                    <option value="HUELVA" label="Huelva">Huelva</option>
+                                    <option value="HUESCA" label="Huesca">Huesca</option>
+                                    <option value="JAÉN" label="Jaén">Jaén</option>
+                                    <option value="LEÓN" label="León">León</option>
+                                    <option value="LÉRIDA" label="Lérida">Lérida</option>
+                                    <option value="LA RIOJA" label="La Rioja">La Rioja</option>
+                                    <option value="LUGO" label="Lugo">Lugo</option>
+                                    <option value="MADRID" label="Madrid">Madrid</option>
+                                    <option value="MÁLAGA" label="Málaga">Málaga</option>
+                                    <option value="MELILLA" label="Melilla">Melilla</option>
+                                    <option value="MURCIA" label="Murcia">Murcia</option>
+                                    <option value="NAVARRA" label="Navarra">Navarra</option>
+                                    <option value="ORENSE" label="Orense">Orense</option>
+                                    <option value="PALENCIA" label="Palencia">Palencia</option>
+                                    <option value="LAS PALMAS" label="Las Palmas">Las Palmas</option>
+                                    <option value="PONTEVEDRA" label="Pontevedra">Pontevedra</option>
+                                    <option value="SALAMANCA" label="Salamanca">Salamanca</option>
+                                    <option value="SANTA Cruz de Tenerife" label="Santa Cruz de Tenerife">Santa Cruz de Tenerife</option>
+                                    <option value="SEGOVIA" label="Segovia">Segovia</option>
+                                    <option value="SEVILLA" label="Sevilla">Sevilla</option>
+                                    <option value="SORIA" label="Soria">Soria</option>
+                                    <option value="TARRAGONA" label="Tarragona">Tarragona</option>
+                                    <option value="TERUEL" label="Teruel">Teruel</option>
+                                    <option value="TOLEDO" label="Toledo">Toledo</option>
+                                    <option value="VALENCIA" label="Valencia">Valencia</option>
+                                    <option value="VALLADOLID" label="Valladolid">Valladolid</option>
+                                    <option value="VIZCAYA" label="Vizcaya">Vizcaya</option>
+                                    <option value="ZAMORA" label="Zamora">Zamora</option>
+                                    <option value="ZARAGOZA" label="Zaragoza">Zaragoza</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="cp" class="col-sm-2 control-label">Tarifa</label>
+                            <div class="col-sm-10">
+                                <select class="form-control" id="id_tarifa">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-10 col-sm-offset-2">
+                                <button id="enviar" type="submit" class="btn btn-primary">Enviar</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({app,.tmp}) scripts/ejercicio7.js -->
+    <script src="scripts/jquery.dataTables.js"></script>
+    <script src="scripts/dataTables.bootstrap.js"></script>
+    <script src="scripts/ejercicio7.js"></script>
+    <!-- endbuild -->
+
+
+</body>
+
+</html>

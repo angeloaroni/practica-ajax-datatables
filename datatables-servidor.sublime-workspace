@@ -1,0 +1,809 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app/php/cargar_clinicas.php",
+			"settings":
+			{
+				"buffer_size": 1906,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/juanda/.config/sublime-text-3/Packages/User/Xdebug.sublime-settings",
+			"settings":
+			{
+				"buffer_size": 55,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "[SideBarGit@SublimeText cargar_clinicas.php/] git status --untracked-files=all --ignored -- cargar_clinicas.php\n\n# Improve this command, the output or the tab title by posting here:\n# http://www.sublimetext.com/forum/viewtopic.php?f=5&t=3405\n# Tip: F5 will run the command again and refresh the contents of this tab\n\nEn la rama master\nYour branch is up-to-date with 'origin/master'.\n\nnothing to commit, working directory clean",
+			"settings":
+			{
+				"buffer_size": 426,
+				"line_ending": "Unix",
+				"name": "Status: cargar_clinicas.php",
+				"scratch": true
+			}
+		},
+		{
+			"file": "/home/juanda/.config/sublime-text-3/Settings/SideBarEnhancements.json",
+			"settings":
+			{
+				"buffer_size": 112,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "datatables-servidor.sublime-project",
+			"settings":
+			{
+				"buffer_size": 326,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/php/ssp.class.php",
+			"settings":
+			{
+				"buffer_size": 14326,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "soluciones/Ejercicio2",
+			"settings":
+			{
+				"buffer_size": 510,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<!doctype html>\n<html class=\"no-js\">\n\n<head>\n    <meta charset=\"utf-8\">\n    <title>Ejercicios Datatables Servidor</title>\n    <meta name=\"description\" content=\"\">\n    <meta name=\"viewport\" content=\"width=device-width\">\n    <link rel=\"shortcut icon\" href=\"/favicon.ico\">\n    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->\n    <!-- build:css(.) styles/vendor.css -->\n    <!-- bower:css -->\n    <link rel=\"stylesheet\" href=\"bower_components/bootstrap/dist/css/bootstrap.css\" />\n    <!-- endbower -->\n    <!-- endbuild -->\n    <!-- build:css(.tmp) styles/main2.css -->\n    <link rel=\"stylesheet\" href=\"styles/dataTables.bootstrap.css\">\n    <link rel=\"stylesheet\" href=\"styles/main.css\">\n    <!-- endbuild -->\n</head>\n\n<body>\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <table id=\"miTabla\" class=\"table\">\n                    <thead>\n                        <th>id_clinica</th>\n                        <th>Nombre</th>\n                        <th>Razón Social</th>\n                        <th>CIF</th>\n                        <th>Localidad</th>\n                        <th>Provincia</th>\n                        <th>Dirección</th>\n                        <th>Número de clínica</th>\n                        <th>id_tarifa</th>\n                    </thead>\n                    <tbody>\n                    </tbody>\n                    <tfoot>\n                        <th>id_clinica</th>\n                        <th>Nombre</th>\n                        <th>Razón Social</th>\n                        <th>CIF</th>\n                        <th>Localidad</th>\n                        <th>Provincia</th>\n                        <th>Dirección</th>\n                        <th>Número de clínica</th>\n                        <th>id_tar[ifa</th>\n                    </tfoot>\n                </table>\n\n            </div>\n        </div>\n    </div>\n    <!-- build:js(.) scripts/vendor.js -->\n    <!-- bower:js -->\n    <script src=\"bower_components/jquery/dist/jquery.js\"></script>\n    <!-- endbower -->\n    <!-- endbuild -->\n\n    <!-- build:js({app,.tmp}) scripts/ejercicio2.js -->\n    <script src=\"scripts/jquery.dataTables.js\"></script>\n    <script src=\"scripts/dataTables.bootstrap.js\"></script>\n    <script src=\"scripts/ejercicio2.js\"></script>\n    <!-- endbuild -->\n</body>\n\n</html>\n",
+			"file": "app/ejercicio2.html",
+			"file_size": 2364,
+			"file_write_time": 130674010941443470,
+			"settings":
+			{
+				"buffer_size": 2357,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix",
+				"name": "Xdebug Context",
+				"read_only": true,
+				"scratch": true
+			}
+		},
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix",
+				"name": "Xdebug Watch",
+				"read_only": true,
+				"scratch": true
+			}
+		},
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix",
+				"name": "Xdebug Stack",
+				"read_only": true,
+				"scratch": true
+			}
+		},
+		{
+			"contents": "=> /home/juanda/datatables_servidor/app/php/cargar_clinicas.php\n	|+| 22\n	|+| 33\n=> /home/juanda/datatables_servidor/app/php/ssp.class.php\n	|+| 233\n	|+| 366\n=> /var/www/laboratoriodental/contacto.php\n	|+| 2\n",
+			"settings":
+			{
+				"buffer_size": 206,
+				"line_ending": "Unix",
+				"name": "Xdebug Breakpoint",
+				"read_only": true,
+				"scratch": true
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 117.0,
+		"selected_items":
+		[
+			[
+				"rem pa",
+				"Package Control: Remove Package"
+			],
+			[
+				"git satus",
+				"Git (SideBarGit): Status"
+			],
+			[
+				"xde",
+				"Xdebug: Stop Debugging (Close Windows)"
+			],
+			[
+				"inspa",
+				"Package Control: Install Package"
+			],
+			[
+				"repa",
+				"Package Control: Remove Package"
+			],
+			[
+				"jque",
+				"Snippet: jQuery.boxModel"
+			],
+			[
+				"inpa",
+				"Package Control: Install Package"
+			],
+			[
+				"inst pa",
+				"Package Control: Install Package"
+			],
+			[
+				"inap",
+				"Package Control: Install Package"
+			],
+			[
+				"remo pa",
+				"Package Control: Remove Package"
+			],
+			[
+				"subli",
+				"SublimeLinter: Show All Errors"
+			],
+			[
+				"su",
+				"SublimeLinter: Show All Errors"
+			],
+			[
+				"syjs",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"set sy html",
+				"Set Syntax: HTML"
+			],
+			[
+				"isnpa",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 746.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"print (\\n)*100",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/juanda/datatables_servidor",
+		"/home/juanda/datatables_servidor/app",
+		"/home/juanda/datatables_servidor/app/php",
+		"/home/juanda/datatables_servidor/ayuda",
+		"/home/juanda/datatables_servidor/ayuda/ejercicio2",
+		"/home/juanda/datatables_servidor/soluciones"
+	],
+	"file_history":
+	[
+		"/home/juanda/.config/sublime-text-3/Packages/Xdebug Client/Xdebug.sublime-settings",
+		"/home/juanda/datatables_servidor/ayuda/ejercicio2/ayuda.txt",
+		"/home/juanda/datatables2/app/ejercicio6_solucionado.html",
+		"/var/www/laboratoriodental/precios.php",
+		"/var/www/laboratoriodental/software.php",
+		"/home/juanda/Escritorio/login.png",
+		"/var/www/laboratoriodental/img/contacto.jpg",
+		"/home/juanda/Escritorio/facturar_albaranes.png",
+		"/home/juanda/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/juanda/.config/sublime-text-3/Packages/Emmet/Default (Linux).sublime-keymap",
+		"/home/juanda/.config/sublime-text-3/Packages/Emmet/Emmet.sublime-settings"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"connecti",
+			"simple"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/php/cargar_clinicas.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1906,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								659,
+								659
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 137.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/juanda/.config/sublime-text-3/Packages/User/Xdebug.sublime-settings",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 55,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								53,
+								53
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 426,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"SideBarGitBackground": false,
+							"SideBarGitCommand":
+							[
+								"git",
+								"status",
+								"--untracked-files=all",
+								"--ignored",
+								"--",
+								"cargar_clinicas.php"
+							],
+							"SideBarGitIsASideBarGitTab": true,
+							"SideBarGitItem": "/home/juanda/datatables_servidor/app/php/cargar_clinicas.php",
+							"SideBarGitModal": false,
+							"SideBarGitNoResults": "No output to show",
+							"SideBarGitSyntaxFile": false,
+							"SideBarGitTitle": "Status: cargar_clinicas.php",
+							"SideBarGitToStatusBar": false,
+							"default_dir": "/home/juanda/datatables_servidor/app/php",
+							"encoding": "UTF-8",
+							"fallback_encoding": "UTF-8",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/home/juanda/.config/sublime-text-3/Settings/SideBarEnhancements.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 112,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								110,
+								110
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "datatables-servidor.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 326,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								326,
+								326
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/php/ssp.class.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 14326,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								10648,
+								10648
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 390.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "soluciones/Ejercicio2",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 510,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/ejercicio2.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2357,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1809,
+								1809
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 215.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 8,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 10,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 206,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								206,
+								206
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				2,
+				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
+			],
+			[
+				1,
+				1,
+				2,
+				2
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			0.7,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.xdebug":
+	{
+		"height": 0.0
+	},
+	"project": "datatables-servidor.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+		"xdebug":
+		{
+			"hide_conflict": false,
+			"restore_index":
+			{
+				"15":
+				{
+					"group": 0,
+					"index": 0
+				},
+				"16":
+				{
+					"group": 0,
+					"index": 1
+				},
+				"17":
+				{
+					"group": 0,
+					"index": 2
+				},
+				"18":
+				{
+					"group": 0,
+					"index": 3
+				},
+				"19":
+				{
+					"group": 0,
+					"index": 4
+				},
+				"20":
+				{
+					"group": 0,
+					"index": 5
+				},
+				"21":
+				{
+					"group": 0,
+					"index": 6
+				}
+			},
+			"restore_layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			}
+		}
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 321.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
