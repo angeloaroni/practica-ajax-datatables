@@ -60,6 +60,7 @@
            $('#idDoctor').val(aData.idDoctor);
            $('#nombre').val(aData.nombre);
            $('#numColegiado').val(aData.numColegiado);
+           $('#clinicas').val(aData.clinicas);
            
        });
       
@@ -105,9 +106,9 @@
                        //data: { id_clinica: id_clinica, nombre: nombre, ….,  id_tarifa: id_tarifa },
                })
                .done(function(data) {
-                   $('#idClinica').empty();
+                   $('#clinicas').empty();
                    $.each(data, function() {
-                       $('#idClinica').append(
+                       $('#clinicas').append(
                            $('<option></option>').val(this.id_clinica).html(this.nombre)
                        );
                    });
@@ -119,31 +120,23 @@
 
         }       
        cargarClinica();
-       /*
+       
        //mandar los datos editados
-       $('#enviar').click(function(e) {
+       $('#enviar1').click(function(e) {
            e.preventDefault();
-           var idClinica = $('#idClinica').val();
+           var idDoctor = $('#idDoctor').val();
            var nombre = $('#nombre').val();
-           var localidad = $('#localidad').val();
-           var provincia = $('#provincia option:selected').text();
-           var direccion = $('#direccion').val();
-           var cif = $('#cif').val();
-           var cp = $('#cp').val();
-           var id_tarifa = $('#idTarifa').val();
+           var numcolegiado = $('#nunColegiado').val();
+           var clinicas = $('#clinicas').val();
            $.ajax({
-                   url: 'http://www.futbolistas.com/modificar_clinica.php',
+                   url: 'http://www.futbolistas.com/phpDataTables/modificar_doctores.php',
                    type: 'POST',
                    dataType: 'json',
                    data: {
-                       id_clinica: idClinica,
+                       id_doctor: idDoctor,
                        nombre: nombre,
-                       localidad: localidad,
-                       provincia: provincia,
-                       direccion: direccion,
-                       cp: cp,
-                       id_tarifa: id_tarifa,
-                       cif: cif
+                       numcolegiado: numColegiado,
+                       clinicas: clinicas
                    },
                })
                .done(function() {
@@ -161,5 +154,5 @@
                });
 
        });
-   */
+   
    });

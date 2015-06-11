@@ -127,7 +127,7 @@
            
        }
        cargarTarifas();
-//mandar los datos editados
+      //mandar los datos editados
       $('#enviar').click(function(e) {
            e.preventDefault();
            var idClinica = $('#idClinica').val();
