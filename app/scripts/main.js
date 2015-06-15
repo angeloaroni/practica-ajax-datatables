@@ -1,6 +1,7 @@
    'use strict';
    var miTabla;
    $(document).ready(function() {
+       $('#formularioCrear').fadeOut(100);
        miTabla = $('#miTabla').DataTable({
            'processing': true,
            'serverSide': true,
@@ -12,12 +13,12 @@
                'data': 'nombre'
            }, {
                'data': 'numColegiado'
-           }, 
-            { 'data': 'idClinica',
-              'visible':false
-            },
-            { 'data': 'nombreClinica' },
-           {
+           }, {
+               'data': 'idClinica',
+               'visible': false
+           }, {
+               'data': 'nombreClinica'
+           }, {
                'data': 'idDoctor',
                'render': function(data) {
                    return '<a class="btn btn-primary editarbtn" href=http://www.futbolistas.com/php/editar.php?id_doctor=' + data + '>Editar</a><a class="btn btn-warning borrarbtn" href=http://www.futbolistas.com/php/borrar.php?id_doctor=' + data + '>Borrar</a>';
@@ -48,11 +49,12 @@
                }
            }
        });
-     
-       //boton editar
+
+       //boton editar cargamos datos de doctores
        $('#miTabla').on('click', '.editarbtn', function(e) {
            e.preventDefault();
            $('#tabla').fadeOut(100); //oculta tabla (los row del html)
+           $('#formularioCrear').fadeOut(100);
            $('#formulario').fadeIn(100); //muestra formulario (los row del html)
 
            var nRow = $(this).parents('tr')[0];
@@ -61,40 +63,46 @@
            $('#nombre').val(aData.nombre);
            $('#numColegiado').val(aData.numColegiado);
            $('#clinicas').val(aData.clinicas);
-           
+
        });
-      
-      /*
+
        //boton borrar
        $('#miTabla').on('click', '.borrarbtn', function(e) {
            e.preventDefault();
 
            var nRow = $(this).parents('tr')[0];
            var aData = miTabla.row(nRow).data();
-           var idClinica = aData.idClinica;
+           var idDoctor = aData.idDoctor;
            $.ajax({
-                   url: 'http://www.futbolistas.com/borrar_clinica.php',
+                   url: 'http://www.futbolistas.com/phpDataTables/borrar_doctor.php',
                    type: 'GET',
                    dataType: 'json',
                    data: {
-                       'id_clinica': idClinica
+                       'id_doctor': idDoctor
                    },
-               })
-               .done(function() {
-                   var $mitabla = $('#miTabla').dataTable({
-                       bRetrieve: true
-                   });
-                   $mitabla.fnDraw();
-                   console.log('Se ha borrado la clinica' + aData.nombre);
+                   error: function(xhr, status, error) {
+                       $.growl.error({
+                           title: 'ERROR',
+                           message: 'No se ha podido eliminar al doctor'
+                       });
+                   },
+                   success: function(data) {
+                       var $mitabla = $('#miTabla').dataTable({
+                           bRetrieve: true
+                       });
+                       $mitabla.fnDraw();
+                       if (data[0].estado === 0) {
+                           $.growl.notice({
+                               title: 'OK',
+                               message: 'Doctor eliminado correctamente'
+                           });
+                       }
+                   },
+               });               
+       });
 
-               })
-               .fail(function() {
-                   console.log('error al borrar la clinica');
-               });
 
-        });
-      */
-          
+
        //Cargamos nombre de la clinica
        function cargarClinica() {
            $.ajax({
@@ -114,45 +122,153 @@
                    });
                })
                .fail(function() {
-                   console.log('ha habido un erro al obtener el obejeto');
+                   console.log('ha habido un erro al obtener el objeto');
                });
 
 
-        }       
+       }
        cargarClinica();
-       
-       //mandar los datos editados
-       $('#enviar1').click(function(e) {
+
+       /////
+       //INICIO FORMULARIO AÑADIR
+       $('#enviarDoc').click(function(e) {
            e.preventDefault();
-           var idDoctor = $('#idDoctor').val();
-           var nombre = $('#nombre').val();
-           var numcolegiado = $('#nunColegiado').val();
-           var clinicas = $('#clinicas').val();
+           var nombreNuevo = $('#nombreNuevo').val();
+           var numcolegiadoNuevo = $('#numcolegiadoNuevo').val();
+           var clinicas2 = $('#clinicas2').val();
            $.ajax({
-                   url: 'http://www.futbolistas.com/phpDataTables/modificar_doctores.php',
-                   type: 'POST',
-                   dataType: 'json',
-                   data: {
-                       id_doctor: idDoctor,
-                       nombre: nombre,
-                       numcolegiado: numColegiado,
-                       clinicas: clinicas
-                   },
-               })
-               .done(function() {
+               type: 'POST',
+               dataType: 'json',
+               url: 'http://www.futbolistas.com/phpDataTables/crear_doctor.php',
+
+               data: {
+                   nombreNuevo: nombreNuevo,
+                   numcolegiadoNuevo: numcolegiadoNuevo,
+                   clinicas2: clinicas2
+
+               },
+               error: function(xhr, status, error) {
+
+                   $.growl.error({
+
+                       icon: 'glyphicon glyphicon-remove',
+                       title: 'ERROR',
+                       message: 'Error al añadir el doctor!'
+                   });
+
+               },
+               success: function(data) {
                    var $mitabla = $('#miTabla').dataTable({
                        bRetrieve: true
                    });
                    $mitabla.fnDraw();
-               })
-               .fail(function() {
-                   console.log('error');
-               })
-               .always(function() {
-                   $('#tabla').fadeIn(100);
-                   $('#formulario').fadeOut(100);
-               });
+                   if (data[0].estado === 0) {
+                       $.growl.notice({
+                           icon: 'glyphicon glyphicon-ok',
+                           title: 'OK',
+                           message: 'Doctor añadido correctamente!'
+                       }, {
+                           type: 'success'
+                       });
+                   } else {
+                       $.growl.error({
+                           icon: 'glyphicon glyphicon-remove',
+                           message: 'Error al añadir el doctor!'
+                       }, {
+                           type: 'danger'
+                       });
+                   }
+               },
+               complete: {}
+           });
+           $('#formularioCrear').fadeOut(100);
+           $('#tabla').fadeIn(100);
 
        });
-   
+
+
+       /*boton añadir doctor,oculto tabla para mostrar form*/
+       $('#nuevoDoctor').click(function(e) {
+           e.preventDefault();
+           $('#nombreNuevo').val(' ');
+           $('#numcolegiadoNuevo').val(' ');
+           //oculto tabla muestro form
+           $('#tabla').fadeOut(100);
+           $('#formularioCrear').fadeIn(100);
+           cargarClinicaCrear();
+
+       });
+
+
+       //INICIO FUNCION CARGARCLINICACREAR
+       function cargarClinicaCrear() {
+               $.ajax({
+                   type: 'POST',
+                   dataType: 'json',
+                   url: 'http://www.futbolistas.com/phpDataTables/listar_clinicas.php',
+                   async: false,
+
+                   error: function(xhr, status, error) {
+
+
+                   },
+                   success: function(data) {
+                       $('#clinicas2').empty();
+                       $.each(data, function() {
+                           $('#clinicas2').append(
+                               $('<option ></option>').val(this.id_clinica).html(this.nombre)
+                           );
+                       });
+
+                   },
+                   complete: {
+
+                   }
+               });
+           }
+           ////
+
+       //mandar los datos editados
+       $('#enviar').click(function(e) {
+           e.preventDefault();
+           var idDoctor = $('#idDoctor').val();
+           var nombre = $('#nombre').val();
+           var numColegiado = $('#numColegiado').val();
+           var clinicas = $('#clinicas').val();
+           $.ajax({
+               url: 'http://www.futbolistas.com/phpDataTables/modificar_doctores.php',
+               type: 'POST',
+               dataType: 'json',
+               data: {
+                   id_doctor: idDoctor,
+                   nombre: nombre,
+                   numcolegiado: numColegiado,
+                   clinicas: clinicas
+               },
+               error: function(xhr, status, error) {
+                   $.growl.error({
+                       title: 'ERROR',
+                       message: 'No se ha podido editar el doctor'
+                   });
+               },
+               success: function(data) {
+                   var $mitabla = $('#miTabla').dataTable({
+                       bRetrieve: true
+                   });
+                   $mitabla.fnDraw();
+                   if (data[0].estado === 0) {
+                       $.growl.notice({
+                           title: 'OK',
+                           message: 'Doctor editado correctamente'
+                       });
+                   }
+               },
+           });
+           //volvemos habilitar la tabla y el formulario
+           $('#tabla').fadeIn(100);
+           $('#formulario').fadeOut(100);
+           $('#formularioCrear').fadeOut(100);
+
+       });
+
    });
