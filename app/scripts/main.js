@@ -21,7 +21,7 @@
            }, {
                'data': 'idDoctor',
                'render': function(data) {
-                   return '<a class="btn btn-primary editarbtn" href=http://www.futbolistas.com/php/editar.php?id_doctor=' + data + '>Editar</a><a class="btn btn-warning borrarbtn" href=http://www.futbolistas.com/php/borrar.php?id_doctor=' + data + '>Borrar</a>';
+                   return '<a class="btn btn-primary editarbtn" href=http://www.futbolistas.com/php/editar.php?id_doctor=' + data + '>Editar</a><a data-toggle="modal" data-target="#basicModal"  class="btn btn-warning borrarbtn" href=http://www.futbolistas.com/php/borrar_doctor.php?id_doctor=' + data + '>Borrar</a>';
                }
            }],
            'language': {
@@ -74,32 +74,33 @@
            var aData = miTabla.row(nRow).data();
            var idDoctor = aData.idDoctor;
            $.ajax({
-                   url: 'http://www.futbolistas.com/phpDataTables/borrar_doctor.php',
-                   type: 'GET',
-                   dataType: 'json',
-                   data: {
-                       'id_doctor': idDoctor
-                   },
-                   error: function(xhr, status, error) {
-                       $.growl.error({
-                           title: 'ERROR',
-                           message: 'No se ha podido eliminar al doctor'
+               url: 'http://www.futbolistas.com/phpDataTables/borrar_doctor.php',
+               type: 'GET',
+               dataType: 'json',
+               data: {
+                   'id_doctor': idDoctor
+               },
+               error: function(xhr, status, error) {
+                   $.growl.error({
+                       title: 'ERROR',
+                       message: 'No se ha podido eliminar al doctor'
+                   });
+               },
+               success: function(data) {
+                   var $mitabla = $('#miTabla').dataTable({
+                       bRetrieve: true
+                   });
+                   $mitabla.fnDraw();
+                   if (data[0].estado === 0) {
+                       $.growl.notice({
+                           title: 'OK',
+                           message: 'Doctor eliminado correctamente'
                        });
-                   },
-                   success: function(data) {
-                       var $mitabla = $('#miTabla').dataTable({
-                           bRetrieve: true
-                       });
-                       $mitabla.fnDraw();
-                       if (data[0].estado === 0) {
-                           $.growl.notice({
-                               title: 'OK',
-                               message: 'Doctor eliminado correctamente'
-                           });
-                       }
-                   },
-               });               
+                   }
+               },
+           });
        });
+
 
 
 
