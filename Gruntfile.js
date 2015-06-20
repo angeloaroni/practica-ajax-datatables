@@ -19,7 +19,8 @@ module.exports = function (grunt) {
   // Configurable paths
   var config = {
     app: 'app',
-    dist: '/var/www/html/datatables2'
+    dist: 'dist'
+    //dist: '/var/www/html/datatables2'
   };
 
   // Define the configuration for all the tasks

@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Ejercicios Datatables Servidor</title>
-    <meta name="description" content="">
+    <title>Practica Datatables Doctores</title>
+    <meta name="description" content="Practica de datatables con jquery y ajax">
     <meta name="viewport" content="width=device-width">
     <link rel="shortcut icon" href="/favicon.ico">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -21,24 +21,14 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-default">
+    <div class="jumbotron">
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                  
-                </button>
-                <a class="navbar-brand" href="https://github.com/angeloaroni/practica-ajax-datatables">Enlace GitHub ANGELOARONI</a>
-            </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="active">
-                        <p class="navbar-text">Practica Datatables | Doctores <span class="sr-only">(current)</span></p>
-                    </li>
-                </ul>
+            <div class="row">
+                <h2>Prática datatables Doctores</h2>
+                <p>Link de repositorio de la practiva <a href="https://github.com/angeloaroni/practica-ajax-datatables">github-angeloaroni</a>.</p>
             </div>
         </div>
-    </nav>
+    </div>
     <div class="container">
         <div id="tabla" class="row">
             <div class="row">
@@ -90,6 +80,7 @@
         <div id="formulario" class="row">
             <form id="miFormulario" class="form-horizontal">
                 <div>
+                    <h2>Editar Doctor</h2>
                     <div class="form-group">
                         <label for="idDoctor" class="col-sm-4 control-label">Identificador Doctor</label>
                         <div class="col-sm-6">
@@ -124,11 +115,11 @@
                 </div>
             </form>
         </div>
-        <!--  -->
+        <!--  Formulario crear doctor-->
         <div id="formularioCrear" class="row">
             <form class="form-horizontal" id="formCrear" name="formCrear" method="post" action="#">
                 <div>
-                    <h2>Añadir nuevo doctor</h2>
+                    <h2>Añadir Nuevo Doctor</h2>
                     <div class="form-group">
                         <label for="nombreNuevo" class="col-sm-4 control-label">Nombre:*</label>
                         <div class="col-sm-6">
