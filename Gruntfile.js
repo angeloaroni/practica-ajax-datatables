@@ -19,7 +19,6 @@ module.exports = function (grunt) {
   // Configurable paths
   var config = {
     app: 'app',
-    //dist: 'dist'
     dist: '/var/www/html/datatables2'
   };
 
@@ -165,7 +164,7 @@ module.exports = function (grunt) {
     wiredep: {
       app: {
         ignorePath: /^\/|\.\.\//,
-        src: ['<%= config.app %>/index*.html'],
+        src: ['<%= config.app %>/ejercicio*.html'],
         exclude: ['bower_components/bootstrap/dist/js/bootstrap.js']
       }
     },

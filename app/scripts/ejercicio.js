@@ -6,7 +6,7 @@
            'processing': true,
            'serverSide': true,
            //'ajax': 'http://www.futbolistas.com/phpDataTables/server_processing.php',
-           'ajax': 'phpDataTables/server_processing.php',
+           'ajax': './phpDataTables/server_processing.php',
            'columns': [{
                'data': 'idDoctor',
                'visible': false
@@ -76,7 +76,7 @@
            var idDoctor = aData.idDoctor;
            $.ajax({
                //url: 'http://www.futbolistas.com/phpDataTables/borrar_doctor.php',
-               url: 'phpDataTables/borrar_doctor.php',
+               url: './phpDataTables/borrar_doctor.php',
                type: 'GET',
                dataType: 'json',
                data: {
@@ -103,13 +103,16 @@
            });
        });
 
+
+
+
        //Cargamos nombre de la clinica
        function cargarClinica() {
            $.ajax({
                    type: 'GET',
                    dataType: 'json',
                    //url: 'http://www.futbolistas.com/phpDataTables/listar_clinicas.php'
-                   url: 'phpDataTables/listar_clinicas.php'
+                   url: './phpDataTables/listar_clinicas.php'
                        //estos son los datos que queremos actualizar, en json:
                        // {parametro1: valor1, parametro2, valor2, ….}
                        //data: { id_clinica: id_clinica, nombre: nombre, ….,  id_tarifa: id_tarifa },
@@ -141,7 +144,7 @@
                type: 'POST',
                dataType: 'json',
                //url: 'http://www.futbolistas.com/phpDataTables/crear_doctor.php',
-               url: 'phpDataTables/crear_doctor.php',
+               url: './phpDataTables/crear_doctor.php',
 
                data: {
                    nombreNuevo: nombreNuevo,
@@ -208,7 +211,7 @@
                    type: 'POST',
                    dataType: 'json',
                    //url: 'http://www.futbolistas.com/phpDataTables/listar_clinicas.php',
-                   url: 'phpDataTables/listar_clinicas.php',
+                   url: './phpDataTables/listar_clinicas.php',
                    async: false,
 
                    error: function(xhr, status, error) {
@@ -240,7 +243,7 @@
            var clinicas = $('#clinicas').val();
            $.ajax({
                //url: 'http://www.futbolistas.com/phpDataTables/modificar_doctores.php',
-               url: 'phpDataTables/modificar_doctores.php',
+               url: './phpDataTables/modificar_doctores.php',
                type: 'POST',
                dataType: 'json',
                data: {
